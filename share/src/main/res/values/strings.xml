@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">share</string>
+
+    <!--for share-->
+    <string name="qq_not_support_share_text">QQ not support share text</string>
+    <string name="share_not_install">The application is not install</string>
+</resources>

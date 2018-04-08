@@ -57,13 +57,12 @@ freeline_project_description.json
 .idea/misc.xml
 .idea/runConfigurations.xml
 app/.gitignore
-app/build.gradle
-app/libs/
 app/proguard-rules.pro
-app/src/
-build.gradle
 gradle.properties
 gradle/
 gradlew
 gradlew.bat
 settings.gradle
+libs/
+/app/src/main/java/com/share/demo/Keys.kt
+/app/key/
