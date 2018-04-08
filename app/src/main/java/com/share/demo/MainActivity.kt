@@ -17,10 +17,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val config=ShareConfig()
-        config.qqId=Keys.qqId
-        config.wxId=Keys.wxId
-        config.wxsecret=Keys.wxsecret
-        config.weiboId=Keys.weiboId
+        config.qqId=getString(R.string.qqId)
+        config.wxId=getString(R.string.wxId)
+        config.wxsecret=getString(R.string.wxsecret)
+        config.weiboId=getString(R.string.weiboId)
         ShareUtil.init(this,config)
         val imgUrl="http://c.hiphotos.baidu.com/image/pic/item/aa18972bd40735fa04058f9c92510fb30f24081a.jpg"
         val targetUlr="https://www.baidu.com/"
