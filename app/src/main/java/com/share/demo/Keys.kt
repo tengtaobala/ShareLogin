@@ -5,8 +5,8 @@ package com.share.demo
  */
 object Keys {
 
-    val qqId = "1106217548"
-    val wxId = "wx8f682ab756191ecb"
-    val wxsecret = "f3f33b274fbaa37cde6dac09a838262b"
-    val weiboId = "2585155862"
+    val qqId = ""
+    val wxId = ""
+    val wxsecret = ""
+    val weiboId = ""
 }
