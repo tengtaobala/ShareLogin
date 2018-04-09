@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         btn_QQ_share.setOnClickListener({
             ShareUtil.shareText(
                     this,
-                    SharePlatform.QQ,
+                    SharePlatform.QZONE,
                     "测试分享",
                     listener
             )

@@ -9,7 +9,7 @@ android {
         minSdkVersion 15
         targetSdkVersion 26
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.3"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -49,9 +49,8 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:3.5.0'
     implementation files('libs/open_sdk_r5886_lite.jar')
     implementation files('libs/wechat-sdk-android-without-mta-5.1.4.jar')
-//    compile(name:'openDefault-4.2.7', ext:'aar')
-    compile(name:'weibo-4.2.7', ext:'aar')
-//    implementation(name:'core-4.1.0-openDefaultRelease', ext:'aar')
+    implementation 'com.sina.weibo.sdk:core:4.1.4:openDefaultRelease@aar'
+
 }
 
 
@@ -60,3 +59,32 @@ repositories {
         dirs 'libs'
     }
 }
+
+/** 以下开始是将Android Library上传到jcenter的相关配置**/
+apply plugin: 'com.novoda.bintray-release'
+
+publish {
+//    repoName = 'MyMaven'//远程仓库名字,不指明，默认是上传到maven
+    userOrg = 'tengtao'//bintray.com用户名
+    groupId = 'com.lib.share'//jcenter上的路径
+    artifactId = 'Share'//项目名称
+    publishVersion = android.defaultConfig.versionName//版本号
+    desc = 'share'//描述，不重要
+    website = 'https://github.com/tengtaobala/ShareLogin'
+}
+
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+    //加上这些
+    tasks.withType(Javadoc) {
+        options{ encoding "UTF-8"
+            charSet 'UTF-8'
+            links "http://docs.oracle.com/javase/7/docs/api"
+        }
+    }
+}
+
+
