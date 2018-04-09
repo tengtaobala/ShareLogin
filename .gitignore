@@ -63,6 +63,5 @@ gradle/
 gradlew
 gradlew.bat
 settings.gradle
-libs/
 /app/src/main/java/com/share/demo/Keys.kt
 /app/key/
